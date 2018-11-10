@@ -7,12 +7,12 @@ Rostock MAX v3   = 5
 Hacker H2        = 6
 */
 // ### Define your Printer Model here! ###
-#define PRINTER 5
+#define PRINTER 2
 
 // SeeMeCNC Bowden w/PEEK barrel = 1
 // HE240 on ERIS w/accel probe   = 2
 // HE280 w/accel probe           = 3
-#define HOTEND 3
+#define HOTEND 1
 
 // ### Define your motherboard here! ###
 // 301 = RAMBo    302 = MINI RAMBo
@@ -20,7 +20,7 @@ Hacker H2        = 6
 
 // ##### Older Orions w/ATX had Y inverted and NEW PSU on orions needs opposite ###
 // 1 = ATX on older machines  2 = Rail style PSU on newer machines ############################
-#define POWER_SUPPLY 2
+#define POWER_SUPPLY 1
 
 // ### Number of active extruders
 // 1 is standard, 2 is with the Y coupler for dual filament input
@@ -295,7 +295,7 @@ Hacker H2        = 6
 
 #elif PRINTER == 2 // Rostock MAX v2
 #if NUM_EXTRUDER == 1
-#define MOTOR_CURRENT {140,140,140,130,0}
+#define MOTOR_CURRENT {175,175,175,130,0}
 #elif NUM_EXTRUDER == 2
 #define MOTOR_CURRENT {140,140,140,130,130}
 #endif
@@ -303,7 +303,8 @@ Hacker H2        = 6
 #define INVERT_X_DIR 1
 #define INVERT_Y_DIR 0
 #define INVERT_Z_DIR 1
-#define DELTA_DIAGONAL_ROD 291.06  // ball cup arms
+#define DELTA_DIAGONAL_ROD 300 // Trick Laser CF arms
+/*#define DELTA_DIAGONAL_ROD 291.06  // ball cup arms*/
 #define DELTA_MAX_RADIUS 145.0
 #define PRINTER_RADIUS 200.0
 #define Z_MAX_LENGTH 350
